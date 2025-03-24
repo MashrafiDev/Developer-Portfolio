@@ -112,17 +112,11 @@ main{
     margin: 0 auto;
 }
 
-main section{
-    margin-top: 130px;
-    margin-bottom: 130px;
-}
-
 /* about styles */
 .about{
     border-radius: 10px;
     padding: 130px 150px;
     text-align: center;
-    
 }
 .about-items{
     display: flex;
@@ -195,4 +189,66 @@ textarea{
 .icons{
     display: flex;
     column-gap: 10px;
+}
+
+@media screen and (min-width: 800px) {
+    main section {
+            margin-top: 130px;
+            margin-bottom: 130px;
+        }
+}
+
+@media screen and (max-width: 576px) {
+
+    .skills-container,
+    .resume-container,
+    .banner,
+    footer,
+    nav,
+    nav>ul,
+    .about-items {
+        flex-direction: column;
+    }
+
+    nav>ul {
+        gap: 20px;
+    }
+
+    .btn-primary {
+        margin-bottom: 20px;
+    }
+
+    .banner {
+        margin: 20px;
+    }
+
+    .banner-profile-pic {
+        width: 100%;
+    }
+
+    .header {
+        background-image: none;
+    }
+
+    footer,
+    .about {
+        padding: 20px;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    footer input[type="text"],
+    footer input[type="email"],
+    footer textarea {
+        width: calc(100% - 40px);
+    }
+}
+
+/* tablet specific media query */
+@media screen and (min-width: 576px) and (max-width:990px) {
+    .banner {
+        flex-direction: column;
+    }
 }
